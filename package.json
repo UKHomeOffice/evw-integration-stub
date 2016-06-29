@@ -1,13 +1,17 @@
 {
   "name": "evw-integration-stub",
   "version": "1.0.0",
-  "description": "A stub service to mock RESTful communication between Electronic Visa Wavier Customer and Caseworker applications",
+  "description": "A stub service to mock RESTful communication between Electronic Visa Waiver Customer and Caseworker applications",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "author": "Home Office Digital",
   "license": "ISC",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/UKHomeOffice/evw-integration-stub.git"
+  },
   "dependencies": {
     "colour": "^0.7.1",
     "dyson": "^0.10.0"

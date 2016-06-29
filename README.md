@@ -1,6 +1,6 @@
 # EVW Integration Stub
 
-A stub service to mock RESTful communication between Electronic Visa Wavier Customer and Caseworker applications. Built using [Dyson](https://www.npmjs.com/package/dyson)
+A stub service to mock RESTful communication between Electronic Visa Waiver Customer and Caseworker applications. Built using [Dyson](https://www.npmjs.com/package/dyson)
 
 ## Run
 

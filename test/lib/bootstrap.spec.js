@@ -15,9 +15,8 @@ describe('bootstrap', function () {
 
   it('calls dyson.bootstrap', function () {
     bootstrap();
-    dyson.bootstrap.should.have.been.calledWith({
-      configDir: 'mocks',
-      port: '9300'
-    });
+    let called  = dyson.bootstrap.getCall(0).args[0]
+    called.configDir.should.match(/evw-integration-stub\/mocks/);
+    called.port.should.equal('9300');
   });
 });

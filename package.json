@@ -1,16 +1,17 @@
 {
   "name": "evw-integration-stub",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A stub service to mock RESTful communication between Electronic Visa Waiver Customer and Caseworker applications",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "./bin/mocha",
+    "lint": "./node_modules/.bin/eslint ."
   },
   "author": "Home Office Digital",
   "license": "ISC",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/UKHomeOffice/evw-integration-stub.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UKHomeOffice/evw-integration-stub.git"
   },
   "bin": {
     "evw-integration-stub": "./bin/evw-integration-stub.js"
@@ -20,6 +21,12 @@
     "dyson": "^0.10.0"
   },
   "devDependencies": {
-    "eslint": "^2.13.1"
+    "chai": "^3.5.0",
+    "eslint": "^2.13.1",
+    "eslint-plugin-mocha": "^3.0.0",
+    "mocha": "^2.5.3",
+    "proxyquire": "^1.7.10",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0"
   }
 }

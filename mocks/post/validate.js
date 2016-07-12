@@ -1,7 +1,7 @@
 'use strict';
 
 const validate = (body) => {
-  let num = body['evw-number'];
+  let num = body['membershipNumber'];
   if(num === '1000INVALID') {
     return {
       error: 'CASE_NOT_FOUND'

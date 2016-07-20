@@ -2,7 +2,7 @@
 
 const errorCase = function (num, token) {
   let errmap = {
-    'expired': 'EXPIRED_TOKEN',
+    'expired': 'CASE_EXPIRED',
     'invalid': 'INVALID_TOKEN',
     'not-found': 'CASE_NOT_FOUND',
     'not-ready': 'CASE_NOT_VERIFIED'

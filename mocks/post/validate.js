@@ -1,18 +1,16 @@
 'use strict';
 
+const errMap = {
+  'TOOLATEM8': 'CASE_EXPIRED',
+  'NOTVERIFIED': 'CASE_NOT_VERIFIED',
+  '1000INVALID': 'INVALID_TOKEN',
+  'NOFOUND': 'CASE_NOT_FOUND'
+};
+
 const validate = (body) => {
   let num = body['membershipNumber'];
-  if(num === '1000INVALID') {
-    return {
-      error: 'CASE_NOT_FOUND'
-    };
-  }
-  if(num === 'TOOLATEM8') {
-    return {
-      error: 'CASE_NOT_UPDATABLE'
-    };
-  }
-  return {
+  let err = errMap[num];
+  return err && {error: err} || {
     success: true
   };
 };

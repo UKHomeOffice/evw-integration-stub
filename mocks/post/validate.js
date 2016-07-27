@@ -11,7 +11,7 @@ const validate = (body) => {
   let num = body['membershipNumber'];
   let err = errMap[num];
   return err && {error: err} || {
-    success: true
+    emailAddress: 'someone@example.com'
   };
 };
 

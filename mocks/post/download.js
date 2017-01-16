@@ -7,7 +7,7 @@ var checkValid = function checker (body) {
     return valid;
   } else {
     return {
-      error: 'RECORDS_DO_NOT_MATCH'
+      error: 'PASSPORT_NUMBER_MATCH_ERR'
     };
   }
 };
@@ -18,9 +18,18 @@ var download = {
 
   path: '/download/evw/:evwNumber/:token',
 
+  status: function(req, res) {
+    if(req.body.passportNumber === '1000INVALID') {
+      var response = checkValid(req.body);
+
+      res.status(400).send(response);
+    }
+  },
+
   template: function (params, query, body) {
     return checkValid(body);
   }
+
 };
 
 module.exports = download;

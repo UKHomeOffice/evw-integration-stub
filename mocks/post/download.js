@@ -19,15 +19,11 @@ var download = {
   path: '/download/evw/:evwNumber/:token',
 
   status: function(req, res) {
+    var resp = checkValid(req.body);
     if(req.body.passportNumber === '1000INVALID') {
-      var response = checkValid(req.body);
-
-      res.status(400).send(response);
+      res.status(400);
     }
-  },
-
-  template: function (params, query, body) {
-    return checkValid(body);
+    res.send(resp);
   }
 
 };

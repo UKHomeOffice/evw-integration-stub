@@ -12,7 +12,7 @@ const errorCase = function (num, token) {
     'not-ready': 'DOWNLOAD_NOT_READY'
   };
 
-  if(token in errmap) {
+  if (token in errmap) {
     return {
       'error': errmap[token]
     };

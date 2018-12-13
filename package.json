@@ -3,10 +3,10 @@
   "version": "1.7.0",
   "description": "A stub service to mock RESTful communication between Electronic Visa Waiver Customer and Caseworker applications",
   "main": "index.js",
-  "scripts": {
-    "test": "./bin/mocha",
-    "lint": "./node_modules/.bin/eslint ."
-  },
+    "scripts": {
+      "test": "mocha",
+      "lint": "eslint ."
+    },
   "author": "Home Office Digital",
   "license": "ISC",
   "repository": {

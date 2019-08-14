@@ -15,6 +15,7 @@ pipeline:
       event: [push, tag]
 
   publish_to_artifactory:
+
     image: node:8
     secrets:
       - npm_config__auth

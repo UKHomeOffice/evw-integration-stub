@@ -25,7 +25,9 @@ pipeline:
     commands:
       - npm publish
     when:
-      event: [tag]
+      event:
+        - push
+        - tag
 
 matrix:
   NPM_CONFIG_USERNAME:

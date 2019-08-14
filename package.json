@@ -1,6 +1,6 @@
 {
   "name": "evw-integration-stub",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "A stub service to mock RESTful communication between Electronic Visa Waiver Customer and Caseworker applications",
   "main": "index.js",
   "scripts": {

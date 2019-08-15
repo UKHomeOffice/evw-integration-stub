@@ -11,13 +11,19 @@ const errorCase = function (num, token) {
     'no-passport-update': 'NOT_AWAITING_NEW_PASSPORT_UPLOAD'
   };
 
-  if(num === 'valid' && token === 'token') {
+  if(token in errmap) {
+    return {
+      'error': errmap[token]
+    };
+  }
+  else if (num in errmap) {
+    return {
+      'error': errmap[num]
+    };
+  }
+  else {
     return false;
   }
-
-  return {
-    'error': errmap[token]
-  };
 };
 
 const check = {
